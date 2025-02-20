@@ -128,13 +128,21 @@ http://localhost:3000/
 }
 ```
 #### Screenshots
+Student Registration: Enter name and USN
 ![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Landing%20Page.jpeg)
+Module Selection: Choose from 5 modules
 ![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Select%20Module%20Option.jpeg)
+Questions Database: Questions are fetched from database
 ![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Questions%20for%20each%20module%20will%20be%20fetched%20from%20database.jpeg)
+Quiz Interface: Questions with options
 ![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Questions%20displayed%20with%20Options.jpeg)
+Feedback Form: 5-star rating and comments
 ![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Feedbackform.jpeg)
+Students Database: Student details gets updated automatically
 ![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/All%20students%20details%20gets%20updated%20automatically%20in%20quiz.db.jpeg)
+Feedback Database: Feedback will be stored separately
 ![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Feedback%20will%20be%20sorted%20seperately.jpeg)
+
 
 
 ## 📜 License
