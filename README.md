@@ -128,6 +128,14 @@ http://localhost:3000/
 }
 ```
 #### Screenshots
+![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Landing%20Page.jpeg)
+![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Select%20Module%20Option.jpeg)
+![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Questions%20for%20each%20module%20will%20be%20fetched%20from%20database.jpeg)
+![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Questions%20displayed%20with%20Options.jpeg)
+![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Feedbackform.jpeg)
+![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/All%20students%20details%20gets%20updated%20automatically%20in%20quiz.db.jpeg)
+![Image](https://github.com/Jeevanreddy-2005/DBMS-Quiz/blob/main/assets/Feedback%20will%20be%20sorted%20seperately.jpeg)
+
 
 ## 📜 License
 [Specify the license type, e.g., MIT, Apache 2.0, etc.]
