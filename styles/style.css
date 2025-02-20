@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* General styles */
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+/* Start container */
+#start-container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #21d3a9, #34ace0, #706fd3, #08f5b9);
+    background-size: 200% 200%;
+    animation: waveAnimation 8s ease infinite;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 90vw; /* Adjust width to be responsive */
+    width: 100%;
+    color: whitesmoke;
+    margin: 20px; /* Add margin to center the container */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+@keyframes waveAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Image container */
+#image-container {
+    flex: 1;
+}
+
+#image-container img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+/* Form container */
+#form-container {
+    flex: 1;
+    padding: 20px; /* Adjust padding for smaller screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+#form-container h1 {
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+    text-align: center;
+}
+
+#form-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#form-container label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#form-container input {
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 20px); /* Adjust input width for padding */
+}
+
+/* Button styles */
+.button-37 {
+    background-color: #13aa52;
+    border: 1px solid #13aa52;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    text-align: center;
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.button-37:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
+}
+
+/* Module and quiz container styles */
+/* Module container styling */
+#module-container {
+    background: rgba(124, 248, 228, 0.61); /* Background color with opacity */
+    border-radius: 25px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(124, 248, 228, 0.61);
+    text-align: center;
+    color: #333;
+    max-width: 90%;
+    margin: 20px auto;
+    position: relative; /* Add position relative for overlay */
+    padding: 30px;
+}
+
+/* Background image with opacity */
+#module-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/module-bg.avif'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Adjust opacity as needed */
+    border-radius: 16px; /* Match the border-radius of the main container */
+    z-index: -1; /* Ensure it's behind the content */
+}
+
+/* Updated styles for #module-container h2 */
+#module-container h2 {
+    font-size: 2.4rem;
+    color: rgb(88, 87, 87); /* White text color */
+    text-transform: uppercase;
+}
+
+/* Styling for the info container */
+.info {
+    display: flex;
+    align-items: center;
+    background-color: #d3fff6; /* Light green background */
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.info i {
+    font-size: 24px; /* Adjust icon size */
+    margin-right: 10px;
+    color: #13aa52; /* Icon color */
+}
+
+.info p {
+    margin: 0;
+    color: #333; /* Text color */
+}
+
+/* Styling for the info icon */
+.ri-information-line {
+    font-size: 1.5em;
+}
+
+#module-container, #quiz-container {
+    text-align: center;
+    display: none;
+}
+
+/* Module button container */
+.module-btn-container {
+    display: flex;
+    flex-direction: column; /* Display buttons in a column */
+    align-items: center; /* Center align buttons horizontally */
+    margin-top: 20px; /* Add top margin for spacing */
+}
+
+/* Module button styles */
+.module-btn {
+    margin: 14px;
+    padding: 10px 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Full width for buttons */
+    max-width: 150px; /* Limit maximum width */
+    font-size: 18px;
+    width: 60%;
+    font-weight: 500;
+}
+
+.module-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Quiz container */
+#quiz-container {
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+#question-container {
+    margin: 20px 0;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#options-container label {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Feedback container styles */
+#feedback-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#feedback-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#rating-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#rating-container label {
+    margin: 0 8px;
+    font-size: 1.2rem;
+}
+
+#feedback-text {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+#send-feedback-btn {
+    background-color: #13aa52;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#send-feedback-btn:hover {
+    background-color: #109e47;
+}
+
+@media (min-width: 768px) {
+    /* Adjustments for larger screens */
+    #start-container {
+        flex-direction: row;
+        max-width: 800px;
+    }
+
+    #image-container, #form-container {
+        width: 50%; /* Divide into two columns on larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    #start-container {
+        margin: 0px 10px; /* Add margin for centering on smaller screens */
+    }
+
+    #image-container img {
+        width: 80vw;
+    }
+
+    #form-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+        width: 90%;
+        margin: auto;
+    }
+
+    #form-container h1 {
+        margin-top: -10px;
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    .button-37 {
+        padding: 10px 15px; /* Adjust button padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    /* Module button styles */
+    #module-container h2 {
+        font-size: 2rem;
+    }
+
+    .info {
+        padding: 10px;
+        margin-top: 6px; /* Adjust as needed */
+        width: 98%;
+    }
+
+    .info i {
+        font-size: 22px; /* Adjust icon size */
+        margin-right: 8px;
+    }
+
+    .info p {
+        font-size: 14px; /* Adjust text size */
+    }
+
+    .module-btn-container {
+        margin-top: 0px;
+    }
+
+    .module-btn {
+        margin: 6px;
+        padding: 9px 6px;
+        font-size: 16px;
+    }
+
+    #quiz-container {
+        margin: 0px 10px;
+        padding: 10px;
+    }
+
+    #options-container label {
+        margin: 8px 0;
+    }
+
+    #button-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Feedback container styles */
+    #feedback-container {
+        padding: 10px;
+    }
+
+    #feedback-title {
+        font-size: 1.3rem;
+    }
+
+    #rating-container label {
+        font-size: 1rem;
+    }
+
+    #feedback-text {
+        font-size: 14px;
+    }
+
+    #send-feedback-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

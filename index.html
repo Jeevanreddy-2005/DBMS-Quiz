@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Quiz App</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- linking remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="start-container">
+        <div id="image-container">
+            <img src="/assets/quiz-img.png" alt="Quiz Image">
+        </div>
+        <div id="form-container">
+            <h1>DBMS IQ Challenge</h1>
+            <form id="start-form">
+                <label for="name">NAME</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <label for="usn">USN</label>
+                <input type="text" id="usn" placeholder="Enter your USN" required>
+                <button class="button-37" type="submit">START QUIZ</button>
+            </form>
+        </div>
+    </div>
+    <div id="module-container">
+        <h2>Select Module</h2>
+        <div class="info">
+            <i class="ri-information-line"></i>
+            <p>Choose the module to test your understanding level of the concepts...</p>
+        </div>
+        <div class="module-btn-container">
+            <button class="module-btn" data-module="1">Module 1</button>
+            <button class="module-btn" data-module="2">Module 2</button>
+            <button class="module-btn" data-module="3">Module 3</button>
+            <button class="module-btn" data-module="4">Module 4</button>
+            <button class="module-btn" data-module="5">Module 5</button>
+        </div>
+    </div>
+
+    <div id="quiz-container" style="display: none;">
+        <div id="question-container" class="window-container">
+            <!-- Question will be dynamically inserted here -->
+        </div>
+        <div id="options-container" class="window-container">
+            <!-- Options will be dynamically inserted here -->
+        </div>
+        <!-- Feedback container -->
+        <div id="feedback-container" style="display: none;">
+            <h2>Feedback</h2>
+            <p>Rate your understanding:</p>
+            <div id="rating-container">
+                <input type="radio" id="rating-1" name="rating" value="1">
+                <label for="rating-1">1</label>
+                <!-- Include other rating options -->
+            </div>
+            <textarea id="feedback-text" placeholder="Your feedback..."></textarea>
+            <button id="send-feedback-btn">Send Feedback</button>
+        </div>
+
+        <div id="button-container">
+            <button id="prev-btn" class="button-37">Previous</button>
+            <button id="next-btn" class="button-37">Next</button>
+            <button id="submit-btn" class="button-37" style="display: none;">Submit</button>
+            <button id="show-results-btn" class="button-37" style="display: none;">Show Results</button>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
